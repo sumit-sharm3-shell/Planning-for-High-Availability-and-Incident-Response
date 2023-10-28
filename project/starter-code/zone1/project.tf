@@ -7,6 +7,7 @@ resource "kubernetes_namespace" "udacity" {
    ]
  }
 
+
   resource "kubernetes_service" "grafana-external" {
   metadata {
     name      = "grafana-external"
