@@ -39,6 +39,7 @@ resource "aws_rds_cluster" "udacity_cluster" {
   db_cluster_parameter_group_name = aws_rds_cluster_parameter_group.cluster_pg.name
   database_name            = "udacityc2"
   master_username          = "udacity"
+  engine               = "mysql"
   master_password          = "MyUdacityPassword"
   vpc_security_group_ids   = [aws_security_group.db_sg_1.id]
   db_subnet_group_name     = aws_db_subnet_group.udacity_db_subnet_group.name
